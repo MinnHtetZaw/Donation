@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\UserController;
@@ -76,6 +77,8 @@ Route::middleware([
 
 
    // Chart Repost Page
+    Route::get('incomeChart',[ChartController::class,'indexIncomeChart'])->name('admin#incomechart');
+    Route::get('expenseChart',[ChartController::class,'indexExpenseChart'])->name('admin#expensechart');
 
 
 });

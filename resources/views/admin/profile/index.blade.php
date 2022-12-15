@@ -13,24 +13,24 @@
                   <div class="active tab-pane" id="activity">
 
                       <div class="form-group row">
-                        <label  class="col-sm-2 col-form-label">Name:</label>
+                        <label  class="col-sm-5 col-form-label">Name:</label>
                         <span class="col mt-2"> {{ $userData->name }}</span>
                       </div>
 
                       <div class="form-group row">
-                        <label  class="col-sm-2 col-form-label">Email:</label>
+                        <label  class="col-sm-5 col-form-label">Email:</label>
                         <span class="col mt-2"> {{ $userData->email }}</span>
                       </div>
                       <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Role:</label>
+                        <label class="col-sm-5 col-form-label">Role:</label>
                         <span class="col mt-2"> {{ $userData->role }}</span>
                       </div>
                       <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Phone:</label>
+                        <label class="col-sm-5 col-form-label">Phone:</label>
                         <span class="col mt-2"> {{ $userData->phone }}</span>
                       </div>
                       <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Address:</label></label>
+                        <label class="col-sm-5 col-form-label">Address:</label></label>
                         <span class="col mt-2"> {{ $userData->address }}</span>
                       </div>
 

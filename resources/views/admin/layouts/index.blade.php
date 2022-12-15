@@ -83,13 +83,23 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('admin#incomechart') }}" class="nav-link">
               <i class="fas fa-chart-line"></i>
               <p>
-                Chart Report
+                Income Chart Report
               </p>
             </a>
-          </li>
+
+            <li class="nav-item">
+                <a href="{{ route('admin#expensechart') }}" class="nav-link">
+                  <i class="fas fa-chart-line"></i>
+                  <p>
+                    Expense Chart Report
+                  </p>
+                </a>
+              </li>
+
+
 
           <li class="nav-item">
             <form action="{{ route('logout') }}" method="POST">
@@ -138,5 +148,13 @@
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('dist/js/demo.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    @yield('chartIncomeJsScript')
+
+    @yield('chartExpenseJsScript')
+
 </body>
+
 </html>

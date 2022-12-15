@@ -28,7 +28,7 @@
                 <form class="form-horizontal" action ="{{ route('admin#incomeDonate',auth()->user()->id) }}" method="POST">
                     @csrf
                 <div class="form-group row">
-                  <label  class="col-sm-2 col-form-label">User Name</label>
+                  <label  class="col-sm-5 col-form-label">User Name</label>
                   <div class="col-sm-10">
                     <input type="text" name="userName" class="form-control" value="{{ auth()->user()->name}}" disabled >
                   </div>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="form-group row">
-                  <label  class="col-sm-2 col-form-label">Donator Name</label>
+                  <label  class="col-sm-5 col-form-label">Donator Name</label>
                   <div class="col-sm-10">
                     <input type="text" name="donatorName" class="form-control" value="{{ old('donatorName') }}" placeholder="Enter Donator Name">
                   </div>
@@ -45,7 +45,7 @@
                  @enderror
                 </div>
                 <div class="form-group row">
-                  <label class="col-sm-2 col-form-label">Donation Amount</label>
+                  <label class="col-sm-5 col-form-label">Donation Amount</label>
                   <div class="col-sm-10">
                     <input type="number" name="amount" class="form-control" value="{{ old('amount') }}" >
                   </div>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="form-group row">
-                  <label class="col-sm-2 col-form-label">Category</label>
+                  <label class="col-sm-5 col-form-label">Category</label>
                   <div class="col-sm-10">
 
                     <select name="category" class="form-control">
@@ -74,7 +74,7 @@
 
 
                 <div class="form-group row">
-                  <div class="offset-sm-2 col-sm-10">
+                  <div class="offset-sm-5 col-sm-10">
                     <button type="submit" class="btn bg-dark text-white">Donate</button>
                   </div>
                 </div>

@@ -28,7 +28,7 @@
                 <form class="form-horizontal" action ="{{ route('admin#usageExpense',auth()->user()->id) }}" method="POST">
                     @csrf
                 <div class="form-group row">
-                  <label  class="col-sm-2 col-form-label">User Name</label>
+                  <label  class="col-sm-5 col-form-label">User Name</label>
                   <div class="col-sm-10">
                     <input type="text" name="userName" class="form-control" value="{{ auth()->user()->name}}" disabled >
                   </div>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="form-group row">
-                  <label class="col-sm-2 col-form-label">Expense Amount</label>
+                  <label class="col-sm-5 col-form-label">Expense Amount</label>
                   <div class="col-sm-10">
                     <input type="number" name="amount" class="form-control" value="{{ old('amount') }}">
                   </div>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group row">
-                  <label class="col-sm-2 col-form-label">Category</label>
+                  <label class="col-sm-5 col-form-label">Category</label>
                   <div class="col-sm-10">
                     <select name="category" id="" class="form-control">
                         <option value="">Choose Options</option>
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Expense Description</label>
+                    <label class="col-sm-5 col-form-label">Expense Description</label>
                     <div class="col-sm-10">
                       <textarea name="expenseDescription" cols="20" rows="5" class="form-control">{{ old('expenseDescription') }}</textarea>
                     </div>
@@ -71,7 +71,7 @@
                   </div>
 
                 <div class="form-group row">
-                  <div class="offset-sm-2 col-sm-10">
+                  <div class="offset-sm-5 col-sm-10">
                     <button type="submit" class="btn bg-dark text-white">Expense</button>
                   </div>
                 </div>
