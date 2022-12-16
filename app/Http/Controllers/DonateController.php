@@ -62,7 +62,10 @@ class DonateController extends Controller
                             ->join('categories','donates.category_id','=','categories.category_id')
                             ->join('users','donates.user_id','=','users.id')
                             ->get();
-        return view('admin.donate.listDonation')->with(['listData'=>$searchData]);
+
+        $totalamount=donate::select(DB::raw('SUM(donation_amount) as total'))
+                            ->get();
+        return view('admin.donate.listDonation')->with(['listData'=>$searchData,'totalamount'=>$totalamount]);
     }
 
     // Edit Donation Page

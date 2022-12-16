@@ -25,11 +25,12 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{ route('admin#indexDonate') }}" class="brand-link">
 
-        <i class="fas fa-donate ml-5"></i>
-        <span class="brand-text font-weight-light ml-2">Donation</span>
-    </a>
+        <a href="{{ route('admin#indexDonate') }}" class="brand-link">
+
+            <i class="fas fa-donate ml-5"></i>
+            <span class="brand-text font-weight-light ml-2">Donation</span>
+        </a>
 
     <!-- Sidebar -->
     <div class="sidebar">

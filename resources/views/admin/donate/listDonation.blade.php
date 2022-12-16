@@ -3,7 +3,7 @@
 @section('content')
 <div class="row mt-4">
     <div class="col-12">
-      <div class="card">
+      <div class="card mt-2">
 
         <div class="card-header">
           <h3 class="text-center">Donation List Table</h3>

@@ -63,7 +63,10 @@ class ExpenseController extends Controller
                             ->join('categories','expenses.category_id','=','categories.category_id')
                             ->join('users','expenses.user_id','=','users.id')
                             ->get();
-        return view('admin.expense.listExpense')->with(['listData'=>$searchData]);
+
+        $totalamount=expense::select(DB::raw('SUM(expense_amount) as total'))
+                            ->get();
+        return view('admin.expense.listExpense')->with(['listData'=>$searchData,'totalamount'=>$totalamount]);
     }
 
     // Edit Expense Page

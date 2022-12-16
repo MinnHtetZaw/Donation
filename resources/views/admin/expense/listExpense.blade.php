@@ -3,7 +3,7 @@
 @section('content')
 <div class="row mt-4">
     <div class="col-12">
-      <div class="card">
+      <div class="card m-2">
 
         @if (Session::has('expenseDelete'))
         <div class="alert alert-danger alert-dismissible fade show mb-5" role="alert">
