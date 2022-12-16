@@ -31,6 +31,8 @@ class UserListController extends Controller
 
         $Data= $this->getUserData($request);
 
+
+
         User::where('id',$id)->update($Data);
         $userData=User::where('id',$id)->first();
         return back()->with(['UserUpdateSuccess'=>'Update User Scceed!','uData'=>$userData]);

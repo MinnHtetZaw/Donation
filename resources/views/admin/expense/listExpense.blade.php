@@ -15,7 +15,7 @@
         @endif
         <div class="card-header">
 
-          <h3 class="text-center">Expense List Table</h3>
+          <h3 class="text-center mb-5">Expense List Table</h3>
           <h4 class="">Total Expense Usage - {{$totalamount[0]['total']}} Kyats</h4>
 
           <div class="card-tools">

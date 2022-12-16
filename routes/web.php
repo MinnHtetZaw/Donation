@@ -79,6 +79,6 @@ Route::middleware([
    // Chart Repost Page
     Route::get('incomeChart',[ChartController::class,'indexIncomeChart'])->name('admin#incomechart');
     Route::get('expenseChart',[ChartController::class,'indexExpenseChart'])->name('admin#expensechart');
-
-
+    Route::get('incomeChart/download',[ChartController::class,'incomeCsvDownload'])->name('admin#incomeCsvDownload');
+    Route::get('expense/download',[ChartController::class,'expenseCsvDownload'])->name('admin#expenseCsvDownload');
 });

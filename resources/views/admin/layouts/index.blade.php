@@ -27,7 +27,8 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
 
-      <span class="brand-text font-weight-light">Donation</span>
+        <i class="fas fa-donate ml-5"></i>
+        <span class="brand-text font-weight-light ml-2">Donation</span>
     </a>
 
     <!-- Sidebar -->
@@ -105,7 +106,7 @@
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
                 <div class="nav-link">
-                    <button type="submit" class="btn btn-dark"> <i class="fas fa-sign-out-alt"></i>Logout </button>
+                    <button type="submit" class="btn btn-dark" > <i class="fas fa-sign-out-alt"></i>Logout </button>
                 </div>
 
             </form>

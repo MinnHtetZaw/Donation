@@ -1,7 +1,9 @@
 @extends('admin.layouts.index')
 
 @section('content')
-
+<div class="m-2">
+    <a href="{{ route('admin#incomeCsvDownload') }}"><button class="btn btn-success mt-3">CVS download </button></a>
+</div>
 <canvas id="myIncomeChart" height="100px"></canvas>
 
 @endsection

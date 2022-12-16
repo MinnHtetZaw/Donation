@@ -26,6 +26,34 @@ class ChartController extends Controller
         return view('admin.chart.indexIncomeChart', compact('incomelabels', 'incomedata'));
     }
 
+
+    //  CSV Total Income Download
+
+    public function incomeCsvDownload(){
+    $income=donate::select('donates.*','categories.category_name','users.name','donates.created_at','donates.updated_at')
+                     ->join('categories','donates.category_id','=','categories.category_id')
+                     ->join('users','donates.user_id','=','users.id')
+                     ->get();
+
+    $csvExporter= new \Laracsv\Export();
+
+    $csvExporter->build($income,[
+        'name'=> "Receiver Name",
+        'donator_name'=>'Donator_name',
+        'category_name'=>'Category',
+        'donation_amount'=>'Donation_amount',
+        'created_at'=>'Donated Date',
+        'updated_at'=>'Updated Date'
+    ]);
+
+    $csvReader=$csvExporter->getReader();
+
+    $csvReader->setOutputBOM(str:\League\Csv\Reader::BOM_UTF8);
+    $filename='incomeList.csv';
+    return response((string)$csvReader)->header(key:'Content-Type', values:'text/csv; charset=UTF-8')
+                                       ->header(key:'Content-Disposition', values:'attachment; filename="'.$filename.'"');
+    }
+
     public function indexExpenseChart(){
 
         //  Expense Chart
@@ -40,4 +68,31 @@ class ChartController extends Controller
 
         return view('admin.chart.indexExpenseChart', compact('expenselabels','expensedata'));
     }
+
+    //  CSV Total Expense Download
+
+    public function expenseCsvDownload(){
+        $expense=expense::select('expenses.*','categories.category_name','users.name')
+                        ->join('categories','expenses.category_id','=','categories.category_id')
+                        ->join('users','expenses.user_id','=','users.id')
+                        ->get();
+
+        $csvExporter= new \Laracsv\Export();
+
+        $csvExporter->build($expense,[
+            'name'=> "Expense User",
+            'category_name'=>'Category',
+            'expense_amount'=>'Expense_amount',
+            'expense_description'=>'Description',
+            'created_at'=>'Expense Date',
+            'updated_at'=>'Updated Date'
+        ]);
+
+        $csvReader=$csvExporter->getReader();
+
+        $csvReader->setOutputBOM(str:\League\Csv\Reader::BOM_UTF8);
+        $filename='expenseList.csv';
+        return response((string)$csvReader)->header(key:'Content-Type', values:'text/csv; charset=UTF-8')
+                                           ->header(key:'Content-Disposition', values:'attachment; filename="'.$filename.'"');
+        }
 }
