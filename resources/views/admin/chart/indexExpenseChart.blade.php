@@ -20,8 +20,10 @@
     labels: expenselabels,
     datasets: [{
       label: 'Expense Chart',
-      backgroundColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgba(240, 157, 157,0.5)',
       borderColor: 'rgb(255, 99, 132)',
+      pointRadius: 10,
+      pointHoverRadius: 20,
       data: expenseusers,
     }]
   };
@@ -40,3 +42,5 @@
 </script>
 
 @endsection
+
+<div class="" style="background-color: rgb(240, 157, 157)"></div>

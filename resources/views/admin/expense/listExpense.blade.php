@@ -3,6 +3,9 @@
 @section('content')
 <div class="row mt-4">
     <div class="col-12">
+        <div class="mt-3 ml-2">
+            <a href="{{ route('admin#indexExpense') }}"><button class="btn btn-secondary" style="width: 10%">Back</button></a>
+        </div>
       <div class="card m-2">
 
         @if (Session::has('expenseDelete'))

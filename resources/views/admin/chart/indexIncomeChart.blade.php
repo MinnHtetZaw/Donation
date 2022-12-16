@@ -19,8 +19,11 @@
       labels: incomelabels,
       datasets: [{
         label: 'Donate Chart',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor:'rgba(136, 228, 136,0.5)',
+        borderColor: 'rgb(13, 184, 13)',
+        pointStyle: 'circle',
+        pointRadius: 10,
+        pointHoverRadius: 20,
         data: incomeusers,
       }]
     };
@@ -38,5 +41,6 @@
 
 </script>
 @endsection
+
 
 

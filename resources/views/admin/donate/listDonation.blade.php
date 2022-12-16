@@ -3,6 +3,9 @@
 @section('content')
 <div class="row mt-4">
     <div class="col-12">
+        <div class="mt-3 ml-2">
+            <a href="{{ route('admin#indexDonate') }}"><button class="btn btn-secondary" style="width: 10%">Back</button></a>
+        </div>
       <div class="card mt-2">
 
         <div class="card-header">
